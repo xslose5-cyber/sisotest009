@@ -1,171 +1,172 @@
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Navigation,
+import {
+  Phone,
+  Mail,
+  Clock,
+  Truck,
   Calendar,
-  Instagram,
-  Facebook
+  Building,
+  Wrench,
+  CheckCircle,
+  MapPin
 } from 'lucide-react';
 
 export function ContactSection() {
   const contactInfo = [
     {
-      icon: MapPin,
-      title: "Address",
-      details: ["Tverskoy Boulevard, 26А", "Moscow, 125009", "Russia"]
-    },
-    {
       icon: Phone,
-      title: "Phone",
-      details: ["+7 (495) 739-0033", "+7 (495) 739-0034"]
+      title: "고객 문의 및 긴급 A/S",
+      details: ["대표전화: 010-7135-8901", "전국 어디든 신속 출동 서비스", "긴급 설비 장애 24시간 상담 가능"]
     },
     {
       icon: Mail,
-      title: "Email",
-      details: ["reservations@cafepushkin.ru", "info@cafepushkin.ru"]
+      title: "이메일 문의",
+      details: ["mariv_siso@naver.com", "도면·사양서 첨부 시 당일 견적 제출", "견적·기술 문의 모두 가능"]
+    },
+    {
+      icon: Truck,
+      title: "전국 서비스 지역",
+      details: ["수도권 · 충청권 · 영남권", "호남권 · 강원권 · 제주도", "전국 어디든 출장 서비스 가능"]
     },
     {
       icon: Clock,
-      title: "Hours",
-      details: ["Monday - Sunday", "8:00 AM - 11:00 PM", "Last orders: 10:30 PM"]
+      title: "영업 시간",
+      details: ["평일: 08:00 - 20:00", "토요일: 09:00 - 17:00", "긴급 출동 서비스 365일 상시 대기"]
     }
   ];
 
-  const socialLinks = [
-    { icon: Instagram, name: "Instagram", handle: "@cafepushkin_moscow" },
-    { icon: Facebook, name: "Facebook", handle: "Café Pushkin Moscow" }
+  const advantages = [
+    "문의 접수 후 30분 내 담당자 연결",
+    "도면·사양서 접수 시 당일 견적 제출",
+    "전국 어디든 최단 시간 현장 출동",
+    "설치 후 하자보증 및 지속 A/S 관리",
+    "설비별 맞춤 제어 로직 무상 수정",
+    "국산·수입 인버터 전 기종 대응 가능",
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            Visit Us
-          </Badge>
-          <h2 className="text-4xl md:text-5xl mb-6">
-            Location & Contact
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Located in the heart of Moscow's Tverskoy district, we're easily accessible 
-            by metro, taxi, or foot. We look forward to welcoming you.
-          </p>
+    <section id="contact" className="py-24 bg-zinc-50 border-t border-zinc-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Header */}
+        <div className="mb-16">
+          <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">Contact</p>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight">
+              빠른 상담 및<br />견적 요청
+            </h2>
+            <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
+              신규 제어반 제작, 기존 설비 개조(Retrofit), 유지보수, 긴급 A/S 등
+              인버터 제어반과 관련된 모든 문의를 환영합니다.
+            </p>
+          </div>
+          <div className="w-12 h-px bg-zinc-300 mt-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-zinc-200">
               {contactInfo.map((info, index) => (
-                <Card key={index}>
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <info.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <CardTitle className="text-lg">{info.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-muted-foreground">
-                        {detail}
-                      </p>
+                <div key={index} className="bg-white p-6">
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <info.icon className="w-4 h-4 text-zinc-400" />
+                    <span className="font-semibold text-zinc-800 text-sm">{info.title}</span>
+                  </div>
+                  <div className="space-y-1">
+                    {info.details.map((detail, di) => (
+                      <p key={di} className="text-xs text-zinc-500 leading-relaxed">{detail}</p>
                     ))}
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               ))}
             </div>
 
-            {/* Action Buttons */}
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Button size="lg" className="w-full">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Make Reservation
+            {/* CTA */}
+            <div className="bg-white border border-zinc-100 p-6">
+              <p className="text-zinc-800 font-semibold text-sm mb-4">바로 연락하기</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                <Button
+                  size="lg"
+                  className="w-full bg-zinc-900 hover:bg-zinc-700 text-white rounded-none h-11 text-sm"
+                  asChild
+                >
+                  <a href="tel:010-7135-8901">
+                    <Phone className="w-4 h-4 mr-2" />
+                    010-7135-8901
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="w-full">
-                  <Navigation className="w-5 h-5 mr-2" />
-                  Get Directions
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full border-zinc-200 text-zinc-700 hover:bg-zinc-50 rounded-none h-11 text-sm"
+                  asChild
+                >
+                  <a href="mailto:mariv_siso@naver.com">
+                    <Mail className="w-4 h-4 mr-2" />
+                    이메일 문의
+                  </a>
                 </Button>
               </div>
-              
-              {/* Social Links */}
-              <div className="flex gap-4 justify-center md:justify-start">
-                {socialLinks.map((social, index) => (
-                  <Button key={index} variant="outline" size="sm">
-                    <social.icon className="w-4 h-4 mr-2" />
-                    {social.name}
-                  </Button>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { icon: Building, label: "회사 소개서 요청" },
+                  { icon: Wrench, label: "A/S 접수" },
+                  { icon: Calendar, label: "방문 견적 예약" },
+                ].map((btn, i) => (
+                  <button
+                    key={i}
+                    className="inline-flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-800 border border-zinc-200 px-3 py-2 hover:border-zinc-400 transition-colors"
+                  >
+                    <btn.icon className="w-3.5 h-3.5" />
+                    {btn.label}
+                  </button>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <Card className="overflow-hidden">
-            <CardContent className="p-0">
-              <div className="bg-muted h-96 flex items-center justify-center relative">
-                <div className="text-center">
-                  <MapPin className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-xl mb-2">Interactive Map</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Click to view our location on Google Maps
-                  </p>
-                  <Button>
-                    <Navigation className="w-4 h-4 mr-2" />
-                    Open in Maps
-                  </Button>
-                </div>
-                
-                {/* Address overlay */}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <Card className="bg-white/95 backdrop-blur">
-                    <CardContent className="p-4">
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <div>
-                          <p className="font-medium">Café Pushkin</p>
-                          <p className="text-sm text-muted-foreground">
-                            Tverskoy Boulevard, 26А, Moscow
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
+          {/* Why SISO + Map */}
+          <div className="space-y-px">
+            {/* Why SISO */}
+            <div className="bg-zinc-900 p-8">
+              <div className="flex items-center gap-2 mb-6">
+                <CheckCircle className="w-4 h-4 text-zinc-400" />
+                <p className="text-zinc-400 text-xs tracking-widest uppercase">SISO를 선택해야 하는 이유</p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+              <div className="space-y-3">
+                {advantages.map((adv, i) => (
+                  <div key={i} className="flex items-start gap-3 border-b border-zinc-800 pb-3 last:border-0 last:pb-0">
+                    <span className="text-zinc-600 text-xs font-mono mt-0.5 shrink-0">0{i + 1}</span>
+                    <p className="text-zinc-300 text-sm leading-relaxed">{adv}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-        {/* Metro Information */}
-        <Card className="mt-12">
-          <CardContent className="p-6">
-            <div className="text-center">
-              <h3 className="text-xl mb-4">Public Transportation</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Service area */}
+            <div className="bg-white border border-zinc-100 p-8">
+              <div className="flex items-center gap-2 mb-5">
+                <MapPin className="w-4 h-4 text-zinc-400" />
+                <p className="text-zinc-800 font-semibold text-sm">전국 서비스 가능</p>
+              </div>
+              <p className="text-zinc-500 text-xs mb-6 leading-relaxed">
+                수도권을 포함한 전국 모든 지역에 출장·설치·A/S 서비스를 제공합니다.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["서울·경기", "인천", "충청", "전라", "경상", "강원", "제주"].map((region, i) => (
+                  <span key={i} className="bg-zinc-900 text-white text-xs px-3 py-1">{region}</span>
+                ))}
+              </div>
+              <div className="flex items-center gap-3 pt-4 border-t border-zinc-100">
+                <Truck className="w-4 h-4 text-zinc-400" />
                 <div>
-                  <Badge variant="secondary" className="mb-2">Metro</Badge>
-                  <p className="text-sm">Pushkinskaya Station (5 min walk)</p>
-                </div>
-                <div>
-                  <Badge variant="secondary" className="mb-2">Bus</Badge>
-                  <p className="text-sm">Routes 15, 31, 39 (Stop: Tverskoy Blvd)</p>
-                </div>
-                <div>
-                  <Badge variant="secondary" className="mb-2">Taxi</Badge>
-                  <p className="text-sm">Uber, Yandex, Gett available</p>
+                  <p className="font-semibold text-zinc-800 text-xs">긴급 출동 서비스 상시 운영</p>
+                  <p className="text-zinc-400 text-xs mt-0.5">설비 장애 발생 시 최단 시간 내 현장 도착 보장</p>
                 </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,65 +1,88 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { MapPin, Clock, Star, Coffee } from 'lucide-react';
+import { Settings, PhoneCall, Clock, ChevronDown } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1920&h=1080&fit=crop"
-          alt="Café Pushkin Interior"
+          src="https://images.unsplash.com/photo-1714322148068-923f9f9bfc1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZWxlY3RyaWNhbCUyMGNvbnRyb2wlMjBwYW5lbCUyMGludmVydGVyfGVufDF8fHx8MTc3MzMyNzk2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          alt="산업용 인버터 제어반"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-900/80 to-zinc-950/95"></div>
+      </div>
+
+      {/* Top label */}
+      <div className="absolute top-0 left-0 right-0 z-10">
+        <div className="container mx-auto px-4 pt-8">
+          <div className="inline-flex items-center gap-3 px-4 py-2 text-white/70 text-sm tracking-[0.2em] uppercase">
+            <Clock className="w-4 h-4" />
+            전국 어디든 신속 출동 · 당일 서비스 가능
+          </div>
+        </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">
-          <Star className="w-3 h-3 mr-1 fill-current" />
-          4.8 Rating • Premium Experience
-        </Badge>
+      <div className="relative z-10 text-white px-6 max-w-5xl mx-auto w-full pt-16 pb-16">
         
-        <h1 className="text-5xl md:text-7xl mb-6 text-white">
-          Café Pushkin
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-white leading-tight tracking-tight">
+          인버터,<br />
+          설비 관리의<br />
+          <span className="text-white/50">핵심 파트너</span><br />
+          <span className="text-white/50">전국 24시<br />무료 방문 출장</span>
         </h1>
-        
-        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-          Experience the elegance of 18th-century Russia in the heart of Moscow. 
-          Exquisite cuisine, artisanal coffee, and timeless atmosphere.
+
+        <div className="w-16 h-px bg-white/30 mb-10"></div>
+
+        <p className="text-base md:text-lg mb-3 text-white/70 max-w-2xl font-light leading-relaxed">
+          데이터센터, 병원, 공장, 빌딩, 물류센터 등 모든 산업시설의<br className="hidden md:block" />
+          펌프·공조기·냉각탑·팬 제어에 최적화된 인버터 제어반을 설계·제작·설치합니다.
+        </p>
+        <p className="text-sm mb-12 text-white/40 max-w-xl">
+          인버터 도입 시 전력 소비 최대 40% 절감 — SISO가 증명합니다.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <div className="flex items-center gap-2 text-white/90">
-            <MapPin className="w-5 h-5" />
-            <span>Tverskoy Boulevard, Central Moscow</span>
-          </div>
-          <div className="flex items-center gap-2 text-white/90">
-            <Clock className="w-5 h-5" />
-            <span>Open Daily 8:00 - 23:00</span>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Button
+            size="lg"
+            className="bg-white text-zinc-900 hover:bg-zinc-100 border-0 h-13 px-8 rounded-none text-sm tracking-wide font-semibold"
+            asChild
+          >
+            <a href="tel:010-7135-8901">
+              <PhoneCall className="w-4 h-4 mr-2" />
+              지금 바로 문의: 010-7135-8901
+            </a>
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-zinc-400 text-zinc-900 bg-white/90 hover:bg-white h-13 px-8 rounded-none text-sm tracking-wide font-semibold"
+            asChild
+          >
+            <a href="#services" className="flex items-center text-zinc-900">
+              <Settings className="w-4 h-4 mr-2" />
+              서비스 분야 보기
+            </a>
+          </Button>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-white text-black hover:bg-white/90">
-            <Coffee className="w-5 h-5 mr-2" />
-            Reserve a Table
-          </Button>
-          <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-            View Menu
-          </Button>
+        {/* Live indicator */}
+        <div className="mt-12 flex items-center gap-3 text-white/40 text-xs">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          현재 문의 상담 가능 · 평균 응답 시간 30분 이내
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/30">
         <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
-          </div>
+          <ChevronDown className="w-6 h-6" />
         </div>
       </div>
     </section>
