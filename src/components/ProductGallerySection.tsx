@@ -1,79 +1,5 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
-
-const galleryItems = [
-  {
-    src: "https://images.unsplash.com/photo-1570086625762-7c1396540ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwaW52ZXJ0ZXIlMjBWRkQlMjBkcml2ZSUyMHVuaXQlMjBlbGVjdHJpY2FsfGVufDF8fHx8MTc3MzMzMTc4MHww&ixlib=rb-4.1.0&q=80&w=800",
-    label: "인버터 드라이브 유닛",
-    sub: "VFD / 가변속 제어 드라이브",
-    size: "tall", // col-span or row-span
-  },
-  {
-    src: "https://images.unsplash.com/photo-1714322148068-923f9f9bfc1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwY29udHJvbCUyMHBhbmVsJTIwY2FiaW5ldCUyMGludGVyaW9yJTIwd2lyaW5nfGVufDF8fHx8MTc3MzMzMTc4MXww&ixlib=rb-4.1.0&q=80&w=800",
-    label: "인버터 제어반 내부",
-    sub: "전문 배선 및 회로 구성",
-    size: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1769148023257-02df7ec903be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVsZWN0cm9uaWNzJTIwaW5kdXN0cmlhbCUyMGF1dG9tYXRpb24lMjBlcXVpcG1lbnR8ZW58MXx8fHwxNzczMzMxNzgyfDA&ixlib=rb-4.1.0&q=80&w=800",
-    label: "전력 전자 자동화 장비",
-    sub: "산업용 자동화 제어 시스템",
-    size: "normal",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1762329406809-e46415e6974e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZWxlY3RyaWNhbCUyMHdpcmluZyUyMGNpcmN1aXQlMjBib2FyZCUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzczMzMxNzg0fDA&ixlib=rb-4.1.0&q=80&w=800",
-    label: "제어 회로 기판",
-    sub: "정밀 배선 및 시퀀스 설계",
-    size: "normal",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcHVtcCUyMG1vdG9yJTIwbWFjaGluZXJ5JTIwY2xvc2UlMjB1cHxlbnwxfHx8fDE3NzMzMzE3ODN8MA&ixlib=rb-4.1.0&q=80&w=800",
-    label: "산업용 펌프 모터",
-    sub: "고효율 인버터 제어 적용",
-    size: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1641471350928-9e30615cebe5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljaWFuJTIwZW5naW5lZXIlMjBpbmR1c3RyaWFsJTIwbWFpbnRlbmFuY2UlMjB3b3JrfGVufDF8fHx8MTc3MzMzMTc4NHww&ixlib=rb-4.1.0&q=80&w=800",
-    label: "현장 기술 서비스",
-    sub: "전문 기술진 직접 출동",
-    size: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1759159091728-e2c87b9d9315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwbWFjaGluZSUyMGluZHVzdHJpYWwlMjBlcXVpcG1lbnQlMjBwcm9kdWN0aW9ufGVufDF8fHx8MTc3MzMzMTc4NXww&ixlib=rb-4.1.0&q=80&w=800",
-    label: "공장 생산 설비",
-    sub: "공정 자동화 인버터 제어",
-    size: "normal",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1663609476830-8c247515c1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZW5lcmd5JTIwZWZmaWNpZW5jeSUyMGVsZWN0cmljaXR5JTIwcG93ZXIlMjBtZXRlcnxlbnwxfHx8fDE3NzMzMzE3ODZ8MA&ixlib=rb-4.1.0&q=80&w=800",
-    label: "에너지 계측 시스템",
-    sub: "전력 모니터링 및 절감 분석",
-    size: "normal",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1761115435501-bebf019aba54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY29vbGluZyUyMHRvd2VyJTIwcm9vZnRvcCUyMG1lY2hhbmljYWx8ZW58MXx8fHwxNzczMzMxODA2fDA&ixlib=rb-4.1.0&q=80&w=800",
-    label: "냉각탑 제어 시스템",
-    sub: "팬 인버터 및 수온 자동 제어",
-    size: "normal",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1764185800646-f75f7e16e465?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYXV0b21hdGlvbiUyMFBMQyUyMGNvbnRyb2wlMjBlcXVpcG1lbnQlMjByYWNrfGVufDF8fHx8MTc3MzMzMTgwN3ww&ixlib=rb-4.1.0&q=80&w=800",
-    label: "PLC 자동화 제어반",
-    sub: "BMS/BAS 연동 스마트 제어",
-    size: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1738918922725-d70c666ddccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHB1bXAlMjBpbmR1c3RyaWFsJTIwZmFjaWxpdHl8ZW58MXx8fHwxNzczMzI3OTY4fDA&ixlib=rb-4.1.0&q=80&w=800",
-    label: "가압 펌프 시스템",
-    sub: "PID 정압 인버터 제어",
-    size: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1679303777007-c6c4522beb02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFuJTIwdmVudGlsYXRpb24lMjBibG93ZXIlMjBmYWN0b3J5fGVufDF8fHx8MTc3MzMyNzk3MXww&ixlib=rb-4.1.0&q=80&w=800",
-    label: "팬·송풍기 제어",
-    sub: "풍량·정압 정밀 인버터 제어",
-    size: "normal",
-  },
-];
+import imgInverterDriveUnit from "figma:asset/38891e95c3245421464be9369f81f886b850ea33.png";
 
 export function ProductGallerySection() {
   return (
@@ -97,23 +23,163 @@ export function ProductGallerySection() {
 
         {/* Mosaic Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-zinc-100">
-          {/* Row 1: wide + normal + normal */}
-          <GalleryCard item={galleryItems[0]} className="col-span-1 row-span-2" />
-          <GalleryCard item={galleryItems[1]} className="col-span-2" />
-          <GalleryCard item={galleryItems[2]} className="col-span-1" />
-          <GalleryCard item={galleryItems[3]} className="col-span-1" />
-          <GalleryCard item={galleryItems[10]} className="col-span-1" />
 
-          {/* Row 2 */}
-          <GalleryCard item={galleryItems[4]} className="col-span-1 row-span-2" />
-          <GalleryCard item={galleryItems[5]} className="col-span-2" />
-          <GalleryCard item={galleryItems[6]} className="col-span-1" />
-          <GalleryCard item={galleryItems[7]} className="col-span-1" />
-          <GalleryCard item={galleryItems[8]} className="col-span-1" />
+          {/* 1. 인버터 드라이브 유닛 — row-span-2 */}
+          <GalleryCard
+            className="col-span-1 row-span-2"
+            label="인버터 드라이브 유닛"
+            sub="VFD / 가변속 제어 드라이브"
+          >
+            <ImageWithFallback
+              src={imgInverterDriveUnit}
+              alt="인버터 드라이브 유닛"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
 
-          {/* Row 3 */}
-          <GalleryCard item={galleryItems[9]} className="col-span-1 row-span-2" />
-          <GalleryCard item={galleryItems[11]} className="col-span-2" />
+          {/* 2. 인버터 제어반 내부 — col-span-2 */}
+          <GalleryCard
+            className="col-span-2"
+            label="인버터 제어반 내부"
+            sub="전문 배선 및 회로 구성"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1714322148068-923f9f9bfc1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwY29udHJvbCUyMHBhbmVsJTIwY2FiaW5ldCUyMGludGVyaW9yJTIwd2lyaW5nfGVufDF8fHx8MTc3MzMzMTc4MXww&ixlib=rb-4.1.0&q=80&w=800"
+              alt="인버터 제어반 내부"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 3. 전력 전자 자동화 장비 */}
+          <GalleryCard
+            className="col-span-1"
+            label="전력 전자 자동화 장비"
+            sub="산업용 자동화 제어 시스템"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1769148023257-02df7ec903be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVsZWN0cm9uaWNzJTIwaW5kdXN0cmlhbCUyMGF1dG9tYXRpb24lMjBlcXVpcG1lbnR8ZW58MXx8fHwxNzczMzMxNzgyfDA&ixlib=rb-4.1.0&q=80&w=800"
+              alt="전력 전자 자동화 장비"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 4. 제어 회로 기판 */}
+          <GalleryCard
+            className="col-span-1"
+            label="제어 회로 기판"
+            sub="정밀 배선 및 시퀀스 설계"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1762329406809-e46415e6974e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZWxlY3RyaWNhbCUyMHdpcmluZyUyMGNpcmN1aXQlMjBib2FyZCUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzczMzMxNzg0fDA&ixlib=rb-4.1.0&q=80&w=800"
+              alt="제어 회로 기판"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 5. 가압 펌프 시스템 */}
+          <GalleryCard
+            className="col-span-1"
+            label="가압 펌프 시스템"
+            sub="PID 정압 인버터 제어"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1738918922725-d70c666ddccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHB1bXAlMjBpbmR1c3RyaWFsJTIwZmFjaWxpdHl8ZW58MXx8fHwxNzczMzI3OTY4fDA&ixlib=rb-4.1.0&q=80&w=800"
+              alt="가압 펌프 시스템"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 6. 산업용 펌프 모터 — row-span-2 */}
+          <GalleryCard
+            className="col-span-1 row-span-2"
+            label="산업용 펌프 모터"
+            sub="고효율 인버터 제어 적용"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcHVtcCUyMG1vdG9yJTIwbWFjaGluZXJ5JTIwY2xvc2UlMjB1cHxlbnwxfHx8fDE3NzMzMzE3ODN8MA&ixlib=rb-4.1.0&q=80&w=800"
+              alt="산업용 펌프 모터"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 7. 현장 기술 서비스 — col-span-2 */}
+          <GalleryCard
+            className="col-span-2"
+            label="현장 기술 서비스"
+            sub="전문 기술진 직접 출동"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1641471350928-9e30615cebe5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljaWFuJTIwZW5naW5lZXIlMjBpbmR1c3RyaWFsJTIwbWFpbnRlbmFuY2UlMjB3b3JrfGVufDF8fHx8MTc3MzMzMTc4NHww&ixlib=rb-4.1.0&q=80&w=800"
+              alt="현장 기술 서비스"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 8. 공장 생산 설비 */}
+          <GalleryCard
+            className="col-span-1"
+            label="공장 생산 설비"
+            sub="공정 자동화 인버터 제어"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1759159091728-e2c87b9d9315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwbWFjaGluZSUyMGluZHVzdHJpYWwlMjBlcXVpcG1lbnQlMjBwcm9kdWN0aW9ufGVufDF8fHx8MTc3MzMzMTc4NXww&ixlib=rb-4.1.0&q=80&w=800"
+              alt="공장 생산 설비"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 9. 에너지 계측 시스템 */}
+          <GalleryCard
+            className="col-span-1"
+            label="에너지 계측 시스템"
+            sub="전력 모니터링 및 절감 분석"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1663609476830-8c247515c1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZW5lcmd5JTIwZWZmaWNpZW5jeSUyMGVsZWN0cmljaXR5JTIwcG93ZXIlMjBtZXRlcnxlbnwxfHx8fDE3NzMzMzE3ODZ8MA&ixlib=rb-4.1.0&q=80&w=800"
+              alt="에너지 계측 시스템"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 10. 냉각탑 제어 시스템 */}
+          <GalleryCard
+            className="col-span-1"
+            label="냉각탑 제어 시스템"
+            sub="팬 인버터 및 수온 자동 제어"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1761115435501-bebf019aba54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY29vbGluZyUyMHRvd2VyJTIwcm9vZnRvcCUyMG1lY2hhbmljYWx8ZW58MXx8fHwxNzczMzMxODA2fDA&ixlib=rb-4.1.0&q=80&w=800"
+              alt="냉각탑 제어 시스템"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 11. PLC 자동화 제어반 — row-span-2 */}
+          <GalleryCard
+            className="col-span-1 row-span-2"
+            label="PLC 자동화 제어반"
+            sub="BMS/BAS 연동 스마트 제어"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1764185800646-f75f7e16e465?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYXV0b21hdGlvbiUyMFBMQyUyMGNvbnRyb2wlMjBlcXVpcG1lbnQlMjByYWNrfGVufDF8fHx8MTc3MzMzMTgwN3ww&ixlib=rb-4.1.0&q=80&w=800"
+              alt="PLC 자동화 제어반"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
+          {/* 12. 팬·송풍기 제어 — col-span-2 */}
+          <GalleryCard
+            className="col-span-2"
+            label="팬·송풍기 제어"
+            sub="풍량·정압 정밀 인버터 제어"
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1679303777007-c6c4522beb02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFuJTIwdmVudGlsYXRpb24lMjBibG93ZXIlMjBmYWN0b3J5fGVufDF8fHx8MTc3MzMyNzk3MXww&ixlib=rb-4.1.0&q=80&w=800"
+              alt="팬·송풍기 제어"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </GalleryCard>
+
         </div>
 
         {/* Bottom note */}
@@ -125,26 +191,32 @@ export function ProductGallerySection() {
   );
 }
 
-function GalleryCard({ item, className }: { item: typeof galleryItems[0]; className?: string }) {
+function GalleryCard({
+  children,
+  className,
+  label,
+  sub,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  label: string;
+  sub: string;
+}) {
   return (
     <div className={`relative overflow-hidden group bg-white cursor-pointer ${className}`}>
       <div className="relative h-44 md:h-52 w-full overflow-hidden">
-        <ImageWithFallback
-          src={item.src}
-          alt={item.label}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {children}
         <div className="absolute inset-0 bg-zinc-900/30 group-hover:bg-zinc-900/60 transition-colors duration-300" />
         {/* Label overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
-          <p className="text-white font-semibold text-sm leading-tight">{item.label}</p>
+          <p className="text-white font-semibold text-sm leading-tight">{label}</p>
           <p className="text-zinc-300 text-xs mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {item.sub}
+            {sub}
           </p>
         </div>
         {/* Index badge */}
         <div className="absolute top-3 right-3 bg-zinc-900/70 text-white text-[10px] px-2 py-0.5 font-mono opacity-0 group-hover:opacity-100 transition-opacity">
-          {item.sub}
+          {sub}
         </div>
       </div>
     </div>

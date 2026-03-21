@@ -1,5 +1,6 @@
-import image_58136a337770fc3891b8eee12afe8a7d39bde17e from 'figma:asset/58136a337770fc3891b8eee12afe8a7d39bde17e.png'
 import imgKakaoTalk202603031459015201 from "figma:asset/81f08b2cf213e9f782f9c7fe3be931ba0dedcfa5.png";
+import imgKakaoTalk202511122033461611 from "figma:asset/be46df8ab687b34c53c22ba4fcbb500a24b433a5.png";
+import imgKakaoTalk202511122214088331 from "figma:asset/0afb3aac3c5a70dcfe809138495c1cca226c9670.png";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Card, CardContent } from './ui/card';
 import { Settings, Zap, ShieldCheck, Clock } from 'lucide-react';
@@ -72,7 +73,7 @@ export function AboutSection() {
                   className="w-full h-72 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1772588052222-ef69ad37794e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMG1vdG9yJTIwaW5kdXN0cmlhbCUyMG1hY2hpbmVyeXxlbnwxfHx8fDE3NzMyMjkzNDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={imgKakaoTalk202511122033461611}
                   alt="산업용 전동기 모터"
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
@@ -84,7 +85,7 @@ export function AboutSection() {
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1764727291644-5dcb0b1a0375?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGJ1aWxkaW5nJTIwbWVkaWNhbCUyMGZhY2lsaXR5fGVufDF8fHx8MTc3MzMzMDQyMXww&ixlib=rb-4.1.0&q=80&w=400"
+                  src={imgKakaoTalk202511122214088331}
                   alt="산업용 자동화 설비"
                   className="w-full h-72 object-cover hover:scale-105 transition-all duration-500"
                 />
@@ -92,7 +93,7 @@ export function AboutSection() {
             </div>
 
             {/* Stat overlay */}
-            <div className="absolute bottom-3 left-3 bg-zinc-900 text-white px-5 py-4">
+            <div className="absolute -bottom-14 left-3 bg-zinc-900 text-white px-5 py-4">
               <p className="text-zinc-400 text-xs mb-0.5">전력 절감 효과</p>
               <p className="text-3xl font-bold tracking-tight">최대 40%</p>
               <p className="text-zinc-500 text-xs mt-0.5">인버터 도입 후 전기료 절감</p>
