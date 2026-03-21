@@ -41,7 +41,7 @@ export function ServicesSection() {
       title: "팬·송풍기 제어반",
       titleEn: "Fan / Blower Panel",
       spec: "배기팬 / 환기팬 / 집진기 / 산업용 블로워",
-      image: "https://images.unsplash.com/photo-1679303777007-c6c4522beb02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFuJTIwdmVudGlsYXRpb24lMjBibG93ZXIlMjBmYWN0b3J5fGVufDF8fHx8MTc3MzMyNzk3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "https://images.unsplash.com/photo-1718118479623-c65e34b2c828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZXhoYXVzdCUyMGZhbiUyMG1vdG9yJTIwYmxvd2VyJTIwbWFudWZhY3R1cmluZ3xlbnwxfHx8fDE3NzMzMzMwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       items: [
         { name: "풍량·정압 정밀 제어", desc: "덕트 내 압력 및 요구 풍량에 맞춘 블로워 모터 정밀 회전수 제어" },
         { name: "소프트 스타트 기동", desc: "대형 팬 기동 시 과도한 기동 전류 제한 및 기계적 충격 완화" },

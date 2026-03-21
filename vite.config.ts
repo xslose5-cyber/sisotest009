@@ -1,10 +1,11 @@
 
   import { defineConfig } from 'vite';
-  import react from '@vitejs/plugin-react-swc';
+  import react from '@vitejs/plugin-react';
+  import tailwindcss from '@tailwindcss/vite';
   import path from 'path';
 
   export default defineConfig({
-    plugins: [react()],
+    plugins: [react(), tailwindcss()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -17,6 +18,9 @@
         'next-themes@0.4.6': 'next-themes',
         'lucide-react@0.487.0': 'lucide-react',
         'input-otp@1.4.2': 'input-otp',
+        'figma:asset/81f08b2cf213e9f782f9c7fe3be931ba0dedcfa5.png': path.resolve(__dirname, './src/assets/81f08b2cf213e9f782f9c7fe3be931ba0dedcfa5.png'),
+        'figma:asset/7bb73d6502f7503e9df643a84265823cd8608349.png': path.resolve(__dirname, './src/assets/7bb73d6502f7503e9df643a84265823cd8608349.png'),
+        'figma:asset/58136a337770fc3891b8eee12afe8a7d39bde17e.png': path.resolve(__dirname, './src/assets/58136a337770fc3891b8eee12afe8a7d39bde17e.png'),
         'figma:asset/1b568686aa5e990a9ed27fc7c738cbf656a211f7.png': path.resolve(__dirname, './src/assets/1b568686aa5e990a9ed27fc7c738cbf656a211f7.png'),
         'embla-carousel-react@8.6.0': 'embla-carousel-react',
         'cmdk@1.1.1': 'cmdk',

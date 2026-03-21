@@ -1,3 +1,5 @@
+import image_58136a337770fc3891b8eee12afe8a7d39bde17e from 'figma:asset/58136a337770fc3891b8eee12afe8a7d39bde17e.png'
+import imgKakaoTalk202603031459015201 from "figma:asset/81f08b2cf213e9f782f9c7fe3be931ba0dedcfa5.png";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Card, CardContent } from './ui/card';
 import { Settings, Zap, ShieldCheck, Clock } from 'lucide-react';
@@ -65,7 +67,7 @@ export function AboutSection() {
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-3">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcHVtcCUyMG1vdG9yJTIwY29udHJvbCUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NzMzMjc5Njd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={imgKakaoTalk202603031459015201}
                   alt="산업용 펌프 모터 제어 장비"
                   className="w-full h-72 object-cover hover:scale-105 transition-all duration-500"
                 />
@@ -82,7 +84,7 @@ export function AboutSection() {
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1717386255767-52643970d483?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMGF1dG9tYXRpb24lMjBlbmdpbmVlcmluZ3xlbnwxfHx8fDE3NzMzMjc5NzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="https://images.unsplash.com/photo-1764727291644-5dcb0b1a0375?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGJ1aWxkaW5nJTIwbWVkaWNhbCUyMGZhY2lsaXR5fGVufDF8fHx8MTc3MzMzMDQyMXww&ixlib=rb-4.1.0&q=80&w=400"
                   alt="산업용 자동화 설비"
                   className="w-full h-72 object-cover hover:scale-105 transition-all duration-500"
                 />

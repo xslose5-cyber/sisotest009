@@ -1,5 +1,4 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Button } from './ui/button';
 import { Settings, PhoneCall, Clock, ChevronDown } from 'lucide-react';
 
 export function HeroSection() {
@@ -37,36 +36,26 @@ export function HeroSection() {
 
         <div className="w-16 h-px bg-white/30 mb-10"></div>
 
-        <p className="text-base md:text-lg mb-3 text-white/70 max-w-2xl font-light leading-relaxed">
+        <p className="text-base md:text-lg mb-12 text-white/70 max-w-2xl font-light leading-relaxed">
           데이터센터, 병원, 공장, 빌딩, 물류센터 등 모든 산업시설의<br className="hidden md:block" />
           펌프·공조기·냉각탑·팬 제어에 최적화된 인버터 제어반을 설계·제작·설치합니다.
         </p>
-        <p className="text-sm mb-12 text-white/40 max-w-xl">
-          인버터 도입 시 전력 소비 최대 40% 절감 — SISO가 증명합니다.
-        </p>
 
         <div className="flex flex-col sm:flex-row gap-3">
-          <Button
-            size="lg"
-            className="bg-white text-zinc-900 hover:bg-zinc-100 border-0 h-13 px-8 rounded-none text-sm tracking-wide font-semibold"
-            asChild
+          <a
+            href="tel:010-7135-8901"
+            className="inline-flex items-center justify-center bg-white text-zinc-900 hover:bg-zinc-100 h-13 px-8 text-sm tracking-wide font-semibold transition-colors"
           >
-            <a href="tel:010-7135-8901">
-              <PhoneCall className="w-4 h-4 mr-2" />
-              지금 바로 문의: 010-7135-8901
-            </a>
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-zinc-400 text-zinc-900 bg-white/90 hover:bg-white h-13 px-8 rounded-none text-sm tracking-wide font-semibold"
-            asChild
+            <PhoneCall className="w-4 h-4 mr-2" />
+            지금 바로 문의: 010-7135-8901
+          </a>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center border border-zinc-400 text-zinc-900 bg-white/90 hover:bg-white h-13 px-8 text-sm tracking-wide font-semibold transition-colors"
           >
-            <a href="#services" className="flex items-center text-zinc-900">
-              <Settings className="w-4 h-4 mr-2" />
-              서비스 분야 보기
-            </a>
-          </Button>
+            <Settings className="w-4 h-4 mr-2" />
+            서비스 분야 보기
+          </a>
         </div>
 
         {/* Live indicator */}
