@@ -1,6 +1,9 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { PhoneCall, ArrowRight, ArrowUpRight } from 'lucide-react';
+import imgKakaoTalk202511122213174292 from "figma:asset/173314cb2674256cd44a2a44764480d37c815e6a.png";
+import imgPumpVertical from "figma:asset/18fa08a0d35eb725bec2df16633a7dd839c20df7.png";
+import imgKakaoTalk202511122214088331 from "figma:asset/0afb3aac3c5a70dcfe809138495c1cca226c9670.png";
 
 export function ServicesSection() {
   const services = [
@@ -8,7 +11,7 @@ export function ServicesSection() {
       title: "펌프 제어반",
       titleEn: "Pump Inverter Panel",
       spec: "상하수도 / 가압장 / 순환 펌프 / 소방 펌프",
-      image: "https://images.unsplash.com/photo-1738918922725-d70c666ddccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHB1bXAlMjBpbmR1c3RyaWFsJTIwZmFjaWxpdHl8ZW58MXx8fHwxNzczMzI3OTY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: imgPumpVertical,
       items: [
         { name: "PID 정압 제어", desc: "급수 배관 압력을 일정하게 유지하여 배관 보호 및 에너지 절약" },
         { name: "대수·교대 운전", desc: "복수 펌프 순차 운전으로 펌프 수명 연장 및 과부하 방지" },
@@ -19,7 +22,7 @@ export function ServicesSection() {
       title: "공조기 제어반",
       titleEn: "AHU Inverter Panel",
       spec: "클린룸 / 병원 / 데이터센터 / 상업용 공조기",
-      image: "https://images.unsplash.com/photo-1611077017686-bcf05c556838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxIVkFDJTIwbWVjaGFuaWNhbCUyMHZlbnRpbGF0aW9uJTIwZHVjdHdvcmt8ZW58MXx8fHwxNzczMzI3OTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: imgKakaoTalk202511122213174292,
       items: [
         { name: "송풍기 인버터 제어", desc: "실내 온·습도·CO2 농도에 따른 급기·배기 모터 회전수 자동 조절" },
         { name: "공조 온도 정밀 제어", desc: "냉·온수 코일 밸브 및 댐퍼 연동 비례 제어 알고리즘 적용" },
@@ -41,7 +44,7 @@ export function ServicesSection() {
       title: "팬·송풍기 제어반",
       titleEn: "Fan / Blower Panel",
       spec: "배기팬 / 환기팬 / 집진기 / 산업용 블로워",
-      image: "https://images.unsplash.com/photo-1718118479623-c65e34b2c828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZXhoYXVzdCUyMGZhbiUyMG1vdG9yJTIwYmxvd2VyJTIwbWFudWZhY3R1cmluZ3xlbnwxfHx8fDE3NzMzMzMwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: imgKakaoTalk202511122214088331,
       items: [
         { name: "풍량·정압 정밀 제어", desc: "덕트 내 압력 및 요구 풍량에 맞춘 블로워 모터 정밀 회전수 제어" },
         { name: "소프트 스타트 기동", desc: "대형 팬 기동 시 과도한 기동 전류 제한 및 기계적 충격 완화" },

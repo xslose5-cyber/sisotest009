@@ -1,5 +1,11 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import imgInverterDriveUnit from "figma:asset/38891e95c3245421464be9369f81f886b850ea33.png";
+import imgKakaoTalk202511122213174292 from "figma:asset/173314cb2674256cd44a2a44764480d37c815e6a.png";
+import imgPumpHorizontal from "figma:asset/be46df8ab687b34c53c22ba4fcbb500a24b433a5.png";
+import imgPumpVertical from "figma:asset/18fa08a0d35eb725bec2df16633a7dd839c20df7.png";
+import imgKakaoTalk202511122036417061 from "figma:asset/a8f7be34a990a03eac2f42134b5100fa394c61b7.png";
+import imgKakaoTalk202511122214088331 from "figma:asset/0afb3aac3c5a70dcfe809138495c1cca226c9670.png";
+import img71 from "figma:asset/1fc16eb5da7a45c853469b288bed9e6acab45e5d.png";
 
 export function ProductGallerySection() {
   return (
@@ -44,37 +50,24 @@ export function ProductGallerySection() {
             sub="전문 배선 및 회로 구성"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1714322148068-923f9f9bfc1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwY29udHJvbCUyMHBhbmVsJTIwY2FiaW5ldCUyMGludGVyaW9yJTIwd2lyaW5nfGVufDF8fHx8MTc3MzMzMTc4MXww&ixlib=rb-4.1.0&q=80&w=800"
+              src={img71}
               alt="인버터 제어반 내부"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </GalleryCard>
 
-          {/* 3. 전력 전자 자동화 장비 */}
-          <GalleryCard
-            className="col-span-1"
-            label="전력 전자 자동화 장비"
-            sub="산업용 자동화 제어 시스템"
-          >
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1769148023257-02df7ec903be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVsZWN0cm9uaWNzJTIwaW5kdXN0cmlhbCUyMGF1dG9tYXRpb24lMjBlcXVpcG1lbnR8ZW58MXx8fHwxNzczMzMxNzgyfDA&ixlib=rb-4.1.0&q=80&w=800"
-              alt="전력 전자 자동화 장비"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </GalleryCard>
-
-          {/* 4. 제어 회로 기판 */}
-          <GalleryCard
-            className="col-span-1"
-            label="제어 회로 기판"
-            sub="정밀 배선 및 시퀀스 설계"
-          >
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1762329406809-e46415e6974e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZWxlY3RyaWNhbCUyMHdpcmluZyUyMGNpcmN1aXQlMjBib2FyZCUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzczMzMxNzg0fDA&ixlib=rb-4.1.0&q=80&w=800"
-              alt="제어 회로 기판"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </GalleryCard>
+          {/* 3. 문구 강조 영역 (기존 3, 4번 카드 대체) */}
+          <div className="col-span-2 flex flex-col justify-center items-start p-8 bg-zinc-900 text-white rounded-lg">
+            <h3 className="text-2xl font-bold mb-4">
+              설비 업체에서도<br />믿고 맡기는 시공 품질
+            </h3>
+            <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+              정밀하고 깔끔한 배선부터 완벽한 시퀀스 설계까지.<br />
+              SISO의 인버터 제어반은 철저한 품질 관리로 완성되며,<br />
+              설치와 공사 모두 전문가가 직접 책임집니다.
+            </p>
+            <div className="w-12 h-px bg-zinc-700" />
+          </div>
 
           {/* 5. 가압 펌프 시스템 */}
           <GalleryCard
@@ -83,7 +76,7 @@ export function ProductGallerySection() {
             sub="PID 정압 인버터 제어"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1738918922725-d70c666ddccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHB1bXAlMjBpbmR1c3RyaWFsJTIwZmFjaWxpdHl8ZW58MXx8fHwxNzczMzI3OTY4fDA&ixlib=rb-4.1.0&q=80&w=800"
+              src={imgPumpHorizontal}
               alt="가압 펌프 시스템"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -96,7 +89,7 @@ export function ProductGallerySection() {
             sub="고효율 인버터 제어 적용"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcHVtcCUyMG1vdG9yJTIwbWFjaGluZXJ5JTIwY2xvc2UlMjB1cHxlbnwxfHx8fDE3NzMzMzE3ODN8MA&ixlib=rb-4.1.0&q=80&w=800"
+              src={imgPumpVertical}
               alt="산업용 펌프 모터"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -109,21 +102,21 @@ export function ProductGallerySection() {
             sub="전문 기술진 직접 출동"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1641471350928-9e30615cebe5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljaWFuJTIwZW5naW5lZXIlMjBpbmR1c3RyaWFsJTIwbWFpbnRlbmFuY2UlMjB3b3JrfGVufDF8fHx8MTc3MzMzMTc4NHww&ixlib=rb-4.1.0&q=80&w=800"
+              src={imgKakaoTalk202511122036417061}
               alt="현장 기술 서비스"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </GalleryCard>
 
-          {/* 8. 공장 생산 설비 */}
+          {/* 8. 공조기(AHU) 제어 */}
           <GalleryCard
             className="col-span-1"
-            label="공장 생산 설비"
-            sub="공정 자동화 인버터 제어"
+            label="공조기(AHU) 제어"
+            sub="온습도 정밀 인버터 제어"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1759159091728-e2c87b9d9315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwbWFjaGluZSUyMGluZHVzdHJpYWwlMjBlcXVpcG1lbnQlMjBwcm9kdWN0aW9ufGVufDF8fHx8MTc3MzMzMTc4NXww&ixlib=rb-4.1.0&q=80&w=800"
-              alt="공장 생산 설비"
+              src={imgKakaoTalk202511122213174292}
+              alt="공조기(AHU) 제어"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </GalleryCard>
@@ -174,7 +167,7 @@ export function ProductGallerySection() {
             sub="풍량·정압 정밀 인버터 제어"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1679303777007-c6c4522beb02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFuJTIwdmVudGlsYXRpb24lMjBibG93ZXIlMjBmYWN0b3J5fGVufDF8fHx8MTc3MzMyNzk3MXww&ixlib=rb-4.1.0&q=80&w=800"
+              src={imgKakaoTalk202511122214088331}
               alt="팬·송풍기 제어"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />

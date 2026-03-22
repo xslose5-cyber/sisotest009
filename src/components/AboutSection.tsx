@@ -80,8 +80,8 @@ export function AboutSection() {
               </div>
               <div className="space-y-3 mt-10">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1763128516808-785e80c1dd68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyJTIwcm9vbSUyMGluZHVzdHJpYWx8ZW58MXx8fHwxNzczMzI3OTY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="데이터센터 서버룸"
+                  src="https://images.unsplash.com/photo-1737574107736-9e02ca5d5387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMG1hbGUlMjBlbmdpbmVlciUyMHNlcnZlciUyMHJvb218ZW58MXx8fHwxNzc0MTEwMjk4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="데이터센터 서버룸 아시아인 작업자"
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback

@@ -1,5 +1,7 @@
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import imgKakaoTalk202507082313405481 from "figma:asset/78c48d576df4b004df724719d71ca39ddebc1a07.png";
+import imgKakaoTalk202511122036417061 from "figma:asset/a8f7be34a990a03eac2f42134b5100fa394c61b7.png";
 import {
   Zap,
   Settings,
@@ -113,11 +115,11 @@ export function FeaturesSection() {
           <div className="grid grid-cols-3 gap-px mb-10">
             {[
               {
-                src: "https://images.unsplash.com/photo-1570086625762-7c1396540ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwaW52ZXJ0ZXIlMjBWRkQlMjBkcml2ZSUyMHVuaXQlMjBlbGVjdHJpY2FsfGVufDF8fHx8MTc3MzMzMTc4MHww&ixlib=rb-4.1.0&q=80&w=600",
+                src: imgKakaoTalk202507082313405481,
                 cap: "인버터 드라이브 유닛"
               },
               {
-                src: "https://images.unsplash.com/photo-1641471350928-9e30615cebe5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljaWFuJTIwZW5naW5lZXIlMjBpbmR1c3RyaWFsJTIwbWFpbnRlbmFuY2UlMjB3b3JrfGVufDF8fHx8MTc3MzMzMTc4NHww&ixlib=rb-4.1.0&q=80&w=600",
+                src: imgKakaoTalk202511122036417061,
                 cap: "전문 기술진 현장 출동"
               },
               {
