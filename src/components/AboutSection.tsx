@@ -1,6 +1,7 @@
 import imgKakaoTalk202603031459015201 from "figma:asset/81f08b2cf213e9f782f9c7fe3be931ba0dedcfa5.png";
 import imgKakaoTalk202511122033461611 from "figma:asset/be46df8ab687b34c53c22ba4fcbb500a24b433a5.png";
 import imgKakaoTalk202511122214088331 from "figma:asset/0afb3aac3c5a70dcfe809138495c1cca226c9670.png";
+import imgKakaoTalk202507082309149132 from "figma:asset/afd071f1a6f0a1e5dc105d89116c31befbe68685.png";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Card, CardContent } from './ui/card';
 import { Settings, Zap, ShieldCheck, Clock } from 'lucide-react';
@@ -80,8 +81,8 @@ export function AboutSection() {
               </div>
               <div className="space-y-3 mt-10">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1737574107736-9e02ca5d5387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMG1hbGUlMjBlbmdpbmVlciUyMHNlcnZlciUyMHJvb218ZW58MXx8fHwxNzc0MTEwMjk4fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="데이터센터 서버룸 아시아인 작업자"
+                  src={imgKakaoTalk202507082309149132}
+                  alt="안전모를 착용하고 전기 제어반을 점검하는 엔지니어"
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback

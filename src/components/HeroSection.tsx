@@ -27,6 +27,17 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-white px-6 max-w-5xl mx-auto w-full pt-16 pb-16">
         
+        {/* 2026 Active Status Badge */}
+        <div className="inline-flex items-center gap-3 px-4 py-2.5 md:px-5 md:py-3 rounded-md bg-zinc-800/80 border border-zinc-700/50 mb-8 shadow-sm backdrop-blur-sm">
+          <span className="relative flex h-3 w-3 md:h-4 md:w-4 flex-shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 md:h-4 md:w-4 bg-emerald-500"></span>
+          </span>
+          <span className="text-zinc-200 text-lg md:text-2xl font-bold tracking-wide">
+            2026년 현재 전국 현장 정상 시공 및 서비스 제공 중
+          </span>
+        </div>
+
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-white leading-tight tracking-tight">
           인버터,<br />
           설비 관리의<br />
@@ -59,12 +70,12 @@ export function HeroSection() {
         </div>
 
         {/* Live indicator */}
-        <div className="mt-12 flex items-center gap-3 text-white/40 text-xs">
-          <span className="relative flex h-2 w-2">
+        <div className="mt-12 flex items-center gap-3 text-white/60 text-base md:text-lg font-medium">
+          <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3 flex-shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-emerald-500"></span>
           </span>
-          현재 문의 상담 가능 · 평균 응답 시간 30분 이내
+          2026년 최신 제어 시스템 적용 · 현재 문의 상담 가능 (평균 응답 시간 30분 이내)
         </div>
       </div>
 
