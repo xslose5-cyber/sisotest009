@@ -191,8 +191,12 @@ export default function App() {
           <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
             <div className="flex flex-col md:flex-row items-center gap-3">
               <p>&copy; 2026 SISO. All rights reserved.</p>
-              <span className="hidden md:inline text-zinc-700">|</span>
-              <p>사업자등록번호 : 160-41-01357</p>
+<span className="hidden md:inline text-zinc-700">|</span>
+<p>상호명 : SISO</p>
+<span className="hidden md:inline text-zinc-700">|</span>
+<p>대표자 : 최한규</p>
+<span className="hidden md:inline text-zinc-700">|</span>
+<p>사업자등록번호 : 160-41-01357</p>
             </div>
             <div className="flex gap-5">
               <a href="#" className="hover:text-zinc-400 transition-colors">개인정보처리방침</a>
