@@ -1,7 +1,6 @@
 import { Card, CardContent } from './ui/card';
+import { photo } from '../siteImages';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import imgKakaoTalk202507082313405481 from "figma:asset/78c48d576df4b004df724719d71ca39ddebc1a07.png";
-import imgKakaoTalk202511122036417061 from "figma:asset/a8f7be34a990a03eac2f42134b5100fa394c61b7.png";
 import {
   Zap,
   Settings,
@@ -115,22 +114,21 @@ export function FeaturesSection() {
           <div className="grid grid-cols-3 gap-px mb-10">
             {[
               {
-                src: imgKakaoTalk202507082313405481,
+                slot: "features-1",
                 cap: "인버터 드라이브 유닛"
               },
               {
-                src: imgKakaoTalk202511122036417061,
+                slot: "features-2",
                 cap: "전문 기술진 현장 출동"
               },
               {
-                src: "https://images.unsplash.com/photo-1764185800646-f75f7e16e465?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYXV0b21hdGlvbiUyMFBMQyUyMGNvbnRyb2wlMjBlcXVpcG1lbnQlMjByYWNrfGVufDF8fHx8MTc3MzMzMTgwN3ww&ixlib=rb-4.1.0&q=80&w=600",
+                slot: "features-3",
                 cap: "PLC 자동화 제어반"
               },
             ].map((img, i) => (
               <div key={i} className="relative overflow-hidden">
                 <ImageWithFallback
-                  src={img.src}
-                  alt={img.cap}
+                  {...photo(img.slot)}
                   className="w-full h-32 object-cover opacity-60 hover:opacity-80 transition-opacity"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-zinc-900/70 px-3 py-1.5">

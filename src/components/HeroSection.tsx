@@ -1,4 +1,5 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { photo } from '../siteImages';
 import { Settings, PhoneCall, Clock, ChevronDown } from 'lucide-react';
 
 export function HeroSection() {
@@ -7,8 +8,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZW5naW5lZXIlMjB3ZWFyaW5nJTIwaGFyZGhhdCUyMGNoZWNraW5nJTIwZWxlY3RyaWNhbCUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NzQxMTAwMzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="산업용 인버터 제어반"
+          {...photo('hero')}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-900/80 to-zinc-950/95"></div>

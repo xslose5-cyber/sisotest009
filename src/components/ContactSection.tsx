@@ -109,17 +109,18 @@ export function ContactSection() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
-                  { icon: Building, label: "회사 소개서 요청" },
-                  { icon: Wrench, label: "A/S 접수" },
-                  { icon: Calendar, label: "방문 견적 예약" },
+                  { icon: Building, label: "회사 소개서 요청", href: `mailto:mariv_siso@naver.com?subject=${encodeURIComponent("회사 소개서 요청")}` },
+                  { icon: Wrench, label: "A/S 접수", href: "tel:010-7135-8901" },
+                  { icon: Calendar, label: "방문 견적 예약", href: "tel:010-7135-8901" },
                 ].map((btn, i) => (
-                  <button
+                  <a
                     key={i}
+                    href={btn.href}
                     className="inline-flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-800 border border-zinc-200 px-3 py-2 hover:border-zinc-400 transition-colors"
                   >
                     <btn.icon className="w-3.5 h-3.5" />
                     {btn.label}
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>

@@ -1,8 +1,5 @@
-import imgKakaoTalk202603031459015201 from "figma:asset/81f08b2cf213e9f782f9c7fe3be931ba0dedcfa5.png";
-import imgKakaoTalk202511122033461611 from "figma:asset/be46df8ab687b34c53c22ba4fcbb500a24b433a5.png";
-import imgKakaoTalk202511122214088331 from "figma:asset/0afb3aac3c5a70dcfe809138495c1cca226c9670.png";
-import imgKakaoTalk202507082309149132 from "figma:asset/afd071f1a6f0a1e5dc105d89116c31befbe68685.png";
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { photo } from '../siteImages';
 import { Card, CardContent } from './ui/card';
 import { Settings, Zap, ShieldCheck, Clock } from 'lucide-react';
 
@@ -69,25 +66,21 @@ export function AboutSection() {
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-3">
                 <ImageWithFallback
-                  src={imgKakaoTalk202603031459015201}
-                  alt="산업용 펌프 모터 제어 장비"
+                  {...photo('about-1')}
                   className="w-full h-72 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback
-                  src={imgKakaoTalk202511122033461611}
-                  alt="산업용 전동기 모터"
+                  {...photo('about-2')}
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
               </div>
               <div className="space-y-3 mt-10">
                 <ImageWithFallback
-                  src={imgKakaoTalk202507082309149132}
-                  alt="안전모를 착용하고 전기 제어반을 점검하는 엔지니어"
+                  {...photo('about-3')}
                   className="w-full h-52 object-cover hover:scale-105 transition-all duration-500"
                 />
                 <ImageWithFallback
-                  src={imgKakaoTalk202511122214088331}
-                  alt="산업용 자동화 설비"
+                  {...photo('about-4')}
                   className="w-full h-72 object-cover hover:scale-105 transition-all duration-500"
                 />
               </div>
@@ -107,18 +100,17 @@ export function AboutSection() {
           <p className="text-center text-zinc-400 text-xs font-medium uppercase tracking-widest mb-10">인버터 제어반 적용 시설</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-px bg-zinc-100">
             {[
-              { name: "데이터센터", sub: "항온·항습 팬 제어", img: "https://images.unsplash.com/photo-1763128516808-785e80c1dd68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyJTIwcm9vbSUyMGluZHVzdHJpYWx8ZW58MXx8fHwxNzczMzI3OTY3fDA&ixlib=rb-4.1.0&q=80&w=400" },
-              { name: "종합병원", sub: "클린룸 공조 제어", img: "https://images.unsplash.com/photo-1764727291644-5dcb0b1a0375?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGJ1aWxkaW5nJTIwbWVkaWNhbCUyMGZhY2lsaXR5fGVufDF8fHx8MTc3MzMzMDQyMXww&ixlib=rb-4.1.0&q=80&w=400" },
-              { name: "대형 빌딩", sub: "냉각탑·AHU 제어", img: "https://images.unsplash.com/photo-1748811371852-b27529c29546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXJnZSUyMG9mZmljZSUyMGJ1aWxkaW5nJTIwc2t5c2NyYXBlciUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MzMzMDQyMnww&ixlib=rb-4.1.0&q=80&w=400" },
-              { name: "물류센터", sub: "환기·펌프 제어", img: "https://images.unsplash.com/photo-1771530789155-b1f03fbf82b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2dpc3RpY3MlMjB3YXJlaG91c2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzMzMjIxMTd8MA&ixlib=rb-4.1.0&q=80&w=400" },
-              { name: "공장·플랜트", sub: "공정 모터 제어", img: "https://images.unsplash.com/photo-1599765824376-a87eb981b2ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMHBsYW50JTIwbWFudWZhY3R1cmluZ3xlbnwxfHx8fDE3NzMyMzE4MzB8MA&ixlib=rb-4.1.0&q=80&w=400" },
-              { name: "아파트·주거", sub: "가압·순환 펌프", img: "https://images.unsplash.com/photo-1770386751962-d3bb928aeb7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcGFydG1lbnQlMjByZXNpZGVudGlhbCUyMGJ1aWxkaW5nJTIwY29tcGxleHxlbnwxfHx8fDE3NzMzMTEwMzl8MA&ixlib=rb-4.1.0&q=80&w=400" },
+              { name: "데이터센터", sub: "항온·항습 팬 제어", slot: "facility-datacenter" },
+              { name: "종합병원", sub: "클린룸 공조 제어", slot: "facility-hospital" },
+              { name: "대형 빌딩", sub: "냉각탑·AHU 제어", slot: "facility-building" },
+              { name: "물류센터", sub: "환기·펌프 제어", slot: "facility-logistics" },
+              { name: "공장·플랜트", sub: "공정 모터 제어", slot: "facility-factory" },
+              { name: "아파트·주거", sub: "가압·순환 펌프", slot: "facility-apartment" },
             ].map((facility, i) => (
               <div key={i} className="bg-white text-center overflow-hidden group">
                 <div className="relative h-28 overflow-hidden">
                   <img
-                    src={facility.img}
-                    alt={facility.name}
+                    {...photo(facility.slot)}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-zinc-900/30 group-hover:bg-zinc-900/10 transition-colors duration-300" />

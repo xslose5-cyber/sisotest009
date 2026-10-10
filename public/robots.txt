@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://mariv.shop/sitemap.xml
+Sitemap: https://www.mariv.shop/sitemap.xml
 
 User-agent: GPTBot
 Allow: /

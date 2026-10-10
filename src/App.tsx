@@ -179,9 +179,13 @@ export default function App() {
             <div>
               <p className="text-white text-sm font-semibold mb-5">고객 지원</p>
               <ul className="space-y-2.5 text-sm">
-                {["온라인 견적 문의", "A/S 접수 및 현황", "긴급 출동 요청", "자주 묻는 질문"].map((item, i) => (
+                {[
+                  { label: "이메일 견적 문의", href: "mailto:mariv_siso@naver.com" },
+                  { label: "A/S 접수", href: "tel:010-7135-8901" },
+                  { label: "긴급 출동 요청", href: "tel:010-7135-8901" },
+                ].map((item, i) => (
                   <li key={i}>
-                    <a href="#contact" className="hover:text-white transition-colors">{item}</a>
+                    <a href={item.href} className="hover:text-white transition-colors">{item.label}</a>
                   </li>
                 ))}
               </ul>
@@ -197,10 +201,6 @@ export default function App() {
 <p>대표자 : 최한규</p>
 <span className="hidden md:inline text-zinc-700">|</span>
 <p>사업자등록번호 : 160-41-01357</p>
-            </div>
-            <div className="flex gap-5">
-              <a href="#" className="hover:text-zinc-400 transition-colors">개인정보처리방침</a>
-              <a href="#" className="hover:text-zinc-400 transition-colors">이용약관</a>
             </div>
           </div>
         </div>
