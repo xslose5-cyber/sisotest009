@@ -1,11 +1,20 @@
-import { ProductGallerySection } from './components/ProductGallerySection';
 import { HeroSection } from './components/HeroSection';
-import { TroubleSection } from './components/TroubleSection';
-import { AboutSection } from './components/AboutSection';
-import { FeaturesSection } from './components/FeaturesSection';
+import { TrustBar } from './components/TrustBar';
+import { PartnerSection } from './components/PartnerSection';
 import { ServicesSection } from './components/ServicesSection';
+import { ProcessSection } from './components/ProcessSection';
+import { ProductGallerySection } from './components/ProductGallerySection';
+import { FeaturesSection } from './components/FeaturesSection';
+import { RepairSection } from './components/RepairSection';
 import { ContactSection } from './components/ContactSection';
 import { PhoneCall, ArrowRight, Menu, X } from 'lucide-react';
+
+const navItems = [
+  { label: "제작 납품", href: "#partner" },
+  { label: "설비별 제어반", href: "#services" },
+  { label: "제작 사례", href: "#cases" },
+  { label: "고장·수리", href: "#repair" },
+];
 import { useState } from 'react';
 import logoImg from 'figma:asset/1b568686aa5e990a9ed27fc7c738cbf656a211f7.png';
 
@@ -24,11 +33,10 @@ export default function App() {
             </span>
           </div>
 
-          <nav className="hidden md:flex gap-8 text-sm text-zinc-500">
-            <a href="#about" className="hover:text-zinc-900 transition-colors">회사소개</a>
-            <a href="#services" className="hover:text-zinc-900 transition-colors">사업분야</a>
-            <a href="#features" className="hover:text-zinc-900 transition-colors">기술특징</a>
-            <a href="#contact" className="hover:text-zinc-900 transition-colors">고객지원</a>
+          <nav className="hidden lg:flex gap-7 text-sm text-zinc-500">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-zinc-900 transition-colors">{item.label}</a>
+            ))}
           </nav>
 
           <div className="flex items-center gap-4">
@@ -46,7 +54,7 @@ export default function App() {
               견적 문의
             </a>
             <button
-              className="md:hidden p-1.5 text-zinc-500 hover:text-zinc-900"
+              className="lg:hidden p-1.5 text-zinc-500 hover:text-zinc-900"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="메뉴 열기"
             >
@@ -57,13 +65,8 @@ export default function App() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-zinc-100 bg-white px-4 py-4 space-y-1">
-            {[
-              { label: "회사소개", href: "#about" },
-              { label: "사업분야", href: "#services" },
-              { label: "기술특징", href: "#features" },
-              { label: "고객지원", href: "#contact" },
-            ].map((item) => (
+          <div className="lg:hidden border-t border-zinc-100 bg-white px-4 py-4 space-y-1">
+            {[...navItems, { label: "견적 문의", href: "#contact" }].map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -87,56 +90,13 @@ export default function App() {
 
       <main>
         <HeroSection />
-        <TroubleSection />
-        <AboutSection />
+        <TrustBar />
+        <PartnerSection />
         <ServicesSection />
+        <ProcessSection />
         <ProductGallerySection />
         <FeaturesSection />
-
-        {/* CTA Section */}
-        <section className="py-24 bg-zinc-900 text-white">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-zinc-500 text-xs tracking-widest uppercase mb-5">지금 바로 시작하세요</p>
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
-                  안정적인 시설 운영과<br />에너지 절감,<br />
-                  <span className="text-zinc-400">SISO가 함께합니다</span>
-                </h2>
-                <p className="text-zinc-400 leading-relaxed text-sm max-w-md">
-                  펌프, 공조기, 냉각탑, 팬 — 모든 설비에 최적화된 인버터 제어반을 설계·제작합니다.
-                  전국 어디든 신속히 출동하여 귀사의 설비를 책임집니다.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <a
-                  href="tel:010-7135-8901"
-                  className="flex items-center justify-between w-full bg-white text-zinc-900 hover:bg-zinc-100 transition-colors px-8 py-5 group"
-                >
-                  <div>
-                    <p className="text-xs text-zinc-500 mb-0.5">전화 문의</p>
-                    <p className="font-bold text-lg">010-7135-8901</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a
-                  href="mailto:mariv_siso@naver.com"
-                  className="flex items-center justify-between w-full bg-zinc-800 hover:bg-zinc-700 text-white transition-colors px-8 py-5 group"
-                >
-                  <div>
-                    <p className="text-xs text-zinc-500 mb-0.5">이메일 문의</p>
-                    <p className="font-bold">mariv_siso@naver.com</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <p className="text-zinc-600 text-xs text-center pt-2">
-                  문의 접수 후 30분 내 담당자가 연락드립니다
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <RepairSection />
         <ContactSection />
       </main>
 
@@ -149,8 +109,8 @@ export default function App() {
                 <img src={logoImg} alt="SISO 로고" className="h-14 w-auto object-contain brightness-0 invert" />
               </div>
               <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
-                산업용 인버터 제어반 전문 제작 기업.<br />
-                시설관리 에너지 절감과 설비의 안정적인 운전을 위해 최적의 제어 솔루션을 제공합니다.
+                공장등록 인버터 제어반 제조사.<br />
+                공조기·냉각탑·펌프·FAN용 인버터 제어반을 설계·제작하고 설치·시운전·A/S까지 직접 책임집니다.
               </p>
               <div className="space-y-1.5 text-sm">
                 <a href="tel:010-7135-8901" className="flex items-center gap-2 hover:text-white transition-colors">

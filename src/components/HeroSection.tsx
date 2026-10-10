@@ -1,6 +1,7 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { photo } from '../siteImages';
-import { Settings, PhoneCall, Clock, ChevronDown } from 'lucide-react';
+import { PHONE, PHONE_HREF, mailto } from '../contact';
+import { PhoneCall, FileText, Factory, ArrowRight, ChevronDown } from 'lucide-react';
 
 export function HeroSection() {
   return (
@@ -14,69 +15,53 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-900/80 to-zinc-950/95"></div>
       </div>
 
-      {/* Top label */}
-      <div className="absolute top-0 left-0 right-0 z-10">
-        <div className="container mx-auto px-4 pt-8">
-          <div className="inline-flex items-center gap-3 px-4 py-2 text-white/70 text-sm tracking-[0.2em] uppercase">
-            <Clock className="w-4 h-4" />
-            전국 어디든 신속 출동 · 당일 서비스 가능
-          </div>
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 text-white px-6 max-w-5xl mx-auto w-full pt-16 pb-16">
-        
-        {/* 2026 Active Status Badge */}
-        <div className="inline-flex items-center gap-3 px-4 py-2.5 md:px-5 md:py-3 rounded-md bg-zinc-800/80 border border-zinc-700/50 mb-8 shadow-sm backdrop-blur-sm">
-          <span className="relative flex h-3 w-3 md:h-4 md:w-4 flex-shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 md:h-4 md:w-4 bg-emerald-500"></span>
-          </span>
-          <span className="text-zinc-200 text-lg md:text-2xl font-bold tracking-wide">
-            2026년 현재 전국 현장 정상 시공 및 서비스 제공 중
+        <div className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-zinc-800/80 border border-zinc-700/50 mb-8 backdrop-blur-sm">
+          <Factory className="w-4 h-4 text-zinc-300" />
+          <span className="text-zinc-200 text-sm md:text-base font-semibold tracking-wide">
+            공장등록 제조사 · 설계부터 제작·시운전·A/S까지 직접
           </span>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-white leading-tight tracking-tight">
-          인버터,<br />
-          설비 관리의<br />
-          <span className="text-white/50">핵심 파트너</span><br />
-          <span className="text-white/50">전국 24시<br />무료 방문 출장</span>
+          공조기·냉각탑·펌프·FAN<br />
+          인버터 제어반,<br />
+          <span className="text-white/50">제조사에서 직접<br className="md:hidden" /> 만듭니다</span>
         </h1>
 
         <div className="w-16 h-px bg-white/30 mb-10"></div>
 
         <p className="text-base md:text-lg mb-12 text-white/70 max-w-2xl font-light leading-relaxed">
-          데이터센터, 병원, 공장, 빌딩, 물류센터 등 모든 산업시설의<br className="hidden md:block" />
-          펌프·공조기·냉각탑·팬 제어에 최적화된 인버터 제어반을 설계·제작·설치합니다.
+          설비·시공업체 납품 전문.<br />
+          도면이나 사양서를 보내 주시면 24시간 안에 견적을 드립니다.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="tel:010-7135-8901"
+            href={mailto('인버터 제어반 견적 요청')}
             className="inline-flex items-center justify-center bg-white text-zinc-900 hover:bg-zinc-100 h-13 px-8 text-sm tracking-wide font-semibold transition-colors"
           >
-            <PhoneCall className="w-4 h-4 mr-2" />
-            지금 바로 문의: 010-7135-8901
+            <FileText className="w-4 h-4 mr-2" />
+            도면 보내고 견적 받기
           </a>
           <a
-            href="#services"
-            className="inline-flex items-center justify-center border border-zinc-400 text-zinc-900 bg-white/90 hover:bg-white h-13 px-8 text-sm tracking-wide font-semibold transition-colors"
+            href={PHONE_HREF}
+            className="inline-flex items-center justify-center border border-white/40 text-white hover:bg-white/10 h-13 px-8 text-sm tracking-wide font-semibold transition-colors"
           >
-            <Settings className="w-4 h-4 mr-2" />
-            서비스 분야 보기
+            <PhoneCall className="w-4 h-4 mr-2" />
+            전화 상담 {PHONE}
           </a>
         </div>
 
-        {/* Live indicator */}
-        <div className="mt-12 flex items-center gap-3 text-white/60 text-base md:text-lg font-medium">
-          <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3 flex-shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-emerald-500"></span>
-          </span>
-          2026년 최신 제어 시스템 적용 · 현재 문의 상담 가능 (평균 응답 시간 30분 이내)
-        </div>
+        <a
+          href="#repair"
+          className="mt-10 inline-flex items-center gap-2 text-white/60 hover:text-white text-sm md:text-base transition-colors"
+        >
+          인버터 고장·긴급 수리가 필요하신가요?
+          <span className="underline underline-offset-4">긴급 수리 안내</span>
+          <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
 
       {/* Scroll Indicator */}

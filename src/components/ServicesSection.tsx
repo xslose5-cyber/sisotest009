@@ -1,6 +1,7 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { photo } from '../siteImages';
 import { Button } from './ui/button';
+import { PHONE, PHONE_HREF, mailto } from '../contact';
 import { PhoneCall, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 export function ServicesSection() {
@@ -52,17 +53,17 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-zinc-50">
+    <section id="services" className="py-24 bg-zinc-50 scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-16">
-          <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">Services</p>
+          <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">Products</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight">
-              설비별 맞춤형<br />인버터 제어반
+              설비별<br />인버터 제어반
             </h2>
             <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
-              각종 모터로 구동되는 산업 설비의 특성을 정밀 분석하여,
-              각 설비에 꼭 맞는 전문적인 인버터 제어 솔루션을 설계·제작합니다.
+              펌프·공조기·냉각탑·팬 등 모터로 구동되는 설비의 특성에 맞춰 제어반을 설계·제작합니다.
+              데이터센터·병원·빌딩·공장·물류센터·아파트 기계실 등에 적용됩니다.
             </p>
           </div>
           <div className="w-12 h-px bg-zinc-300 mt-8"></div>
@@ -99,6 +100,13 @@ export function ServicesSection() {
                     </div>
                   ))}
                 </div>
+                <a
+                  href={mailto(`${service.title} 견적 요청`)}
+                  className="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors"
+                >
+                  이 제어반 견적 받기
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           ))}
@@ -110,9 +118,9 @@ export function ServicesSection() {
             className="bg-zinc-900 hover:bg-zinc-700 text-white rounded-none h-12 px-8 text-sm tracking-wide"
             asChild
           >
-            <a href="tel:010-7135-8901">
-              <PhoneCall className="mr-2 w-4 h-4" />
-              지금 바로 문의하기
+            <a href={mailto('인버터 제어반 견적 요청')}>
+              도면 보내고 견적 받기
+              <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
           <Button
@@ -121,14 +129,14 @@ export function ServicesSection() {
             className="border-zinc-300 text-zinc-700 hover:bg-zinc-50 rounded-none h-12 px-8 text-sm"
             asChild
           >
-            <a href="mailto:mariv_siso@naver.com">
-              이메일로 견적 문의
-              <ArrowRight className="ml-2 w-4 h-4" />
+            <a href={PHONE_HREF}>
+              <PhoneCall className="mr-2 w-4 h-4" />
+              전화 상담 {PHONE}
             </a>
           </Button>
         </div>
         <p className="text-center mt-4 text-xs text-zinc-400">
-          도면 및 사양서를 첨부하시면 더욱 빠르고 정확한 견적을 받아보실 수 있습니다.
+          도면·사양서를 첨부하시면 24시간 안에 견적서를 보내 드립니다.
         </p>
       </div>
     </section>
