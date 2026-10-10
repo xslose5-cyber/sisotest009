@@ -58,7 +58,7 @@ export function ServicesSection() {
         <div className="mb-16">
           <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">Products</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight">
               설비별<br />인버터 제어반
             </h2>
             <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
@@ -88,14 +88,14 @@ export function ServicesSection() {
               </div>
 
               <div className="p-6">
-                <p className="text-zinc-400 text-xs mb-5 border-b border-zinc-100 pb-4">{service.spec}</p>
+                <p className="text-zinc-400 text-sm mb-5 border-b border-zinc-100 pb-4">{service.spec}</p>
                 <div className="space-y-4">
                   {service.items.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex gap-4">
                       <span className="text-zinc-300 text-xs font-mono mt-0.5 shrink-0">0{itemIndex + 1}</span>
                       <div>
-                        <h4 className="font-semibold text-zinc-800 text-sm mb-0.5">{item.name}</h4>
-                        <p className="text-xs text-zinc-500 leading-relaxed">{item.desc}</p>
+                        <h4 className="font-semibold text-zinc-800 text-base mb-0.5">{item.name}</h4>
+                        <p className="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -135,7 +135,7 @@ export function ServicesSection() {
             </a>
           </Button>
         </div>
-        <p className="text-center mt-4 text-xs text-zinc-400">
+        <p className="text-center mt-4 text-sm text-zinc-400">
           도면·사양서를 첨부하시면 24시간 안에 견적서를 보내 드립니다.
         </p>
       </div>

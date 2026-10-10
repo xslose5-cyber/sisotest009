@@ -38,7 +38,7 @@ export function PartnerSection() {
         <div className="mb-16">
           <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">For Contractors</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight">
               설비·시공업체를 위한<br />인버터 제어반 제조 파트너
             </h2>
             <p className="text-zinc-500 max-w-md leading-relaxed text-sm">
@@ -73,7 +73,7 @@ export function PartnerSection() {
                   {...photo(slot)}
                   className={`w-full object-cover ${i === 0 && proofs.length % 2 === 1 ? 'h-64' : 'h-56'}`}
                 />
-                <figcaption className="absolute bottom-0 left-0 right-0 bg-zinc-900/70 px-3 py-1.5 text-xs text-zinc-200">
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-zinc-900/70 px-3 py-1.5 text-sm text-zinc-200">
                   {slotInfo(slot).label}
                 </figcaption>
               </figure>

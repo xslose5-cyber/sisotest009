@@ -17,7 +17,7 @@ export function FeaturesSection() {
         <div className="mb-16">
           <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">Technology</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight">
               기술 역량
             </h2>
             <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">

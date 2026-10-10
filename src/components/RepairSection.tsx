@@ -45,7 +45,7 @@ export function RepairSection() {
           </p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight mb-4">
                 인버터 고장·긴급 수리
               </h2>
               <p className="text-zinc-500 text-sm leading-relaxed max-w-xl">
@@ -71,21 +71,21 @@ export function RepairSection() {
               href={PHONE_HREF}
               className="bg-white p-8 group hover:bg-zinc-900 transition-colors duration-300"
             >
-              <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-zinc-400 group-hover:text-zinc-500 border border-zinc-200 group-hover:border-zinc-700 px-2.5 py-1 mb-6 transition-colors">
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-zinc-400 group-hover:text-zinc-500 border border-zinc-200 group-hover:border-zinc-700 px-2.5 py-1 mb-6 transition-colors">
                 {item.tag}
               </span>
 
-              <p className="text-zinc-800 group-hover:text-white font-semibold leading-snug mb-4 whitespace-pre-line transition-colors text-[15px]">
+              <p className="text-zinc-800 group-hover:text-white font-semibold leading-snug mb-4 whitespace-pre-line transition-colors text-base">
                 "{item.q}"
               </p>
 
               <div className="w-8 h-px bg-zinc-200 group-hover:bg-zinc-700 mb-4 transition-colors" />
 
-              <p className="text-zinc-400 group-hover:text-zinc-400 text-xs leading-relaxed transition-colors">
+              <p className="text-zinc-400 group-hover:text-zinc-400 text-sm leading-relaxed transition-colors">
                 {item.desc}
               </p>
 
-              <div className="mt-6 flex items-center gap-1.5 text-xs text-zinc-400 group-hover:text-zinc-300 transition-colors">
+              <div className="mt-6 flex items-center gap-1.5 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors">
                 <span>전화로 상담하기</span>
                 <ArrowRight className="w-3 h-3" />
               </div>

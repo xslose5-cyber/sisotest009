@@ -1,7 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-size: 14px;
+  --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -186,4 +186,10 @@
 
 html {
   font-size: var(--font-size);
+}
+
+/* 한글은 단어 중간에서 줄이 바뀌지 않게 하고, 너무 긴 단어만 예외로 끊음 */
+body {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }

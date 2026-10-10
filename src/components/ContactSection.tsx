@@ -57,7 +57,7 @@ export function ContactSection() {
         <div className="mb-16">
           <p className="text-zinc-400 text-xs tracking-widest uppercase mb-4">Contact</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight">
               견적·상담 문의
             </h2>
             <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
@@ -77,7 +77,7 @@ export function ContactSection() {
                 className="flex items-center justify-between w-full bg-zinc-900 text-white hover:bg-zinc-700 transition-colors px-8 py-5 group"
               >
                 <div>
-                  <p className="text-xs text-zinc-400 mb-0.5">도면·사양서를 첨부해 보내 주세요</p>
+                  <p className="text-sm text-zinc-400 mb-0.5">도면·사양서를 첨부해 보내 주세요</p>
                   <p className="font-bold text-lg">이메일로 견적 받기</p>
                 </div>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -87,7 +87,7 @@ export function ContactSection() {
                 className="flex items-center justify-between w-full bg-white border border-zinc-200 text-zinc-900 hover:bg-zinc-100 transition-colors px-8 py-5 group"
               >
                 <div>
-                  <p className="text-xs text-zinc-500 mb-0.5">전화 상담 · 긴급 A/S</p>
+                  <p className="text-sm text-zinc-500 mb-0.5">전화 상담 · 긴급 A/S</p>
                   <p className="font-bold text-lg">{PHONE}</p>
                 </div>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -97,7 +97,7 @@ export function ContactSection() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="inline-flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-800 border border-zinc-200 bg-white px-3 py-2 hover:border-zinc-400 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-800 border border-zinc-200 bg-white px-3 py-2 hover:border-zinc-400 transition-colors"
                   >
                     <link.icon className="w-3.5 h-3.5" />
                     {link.label}
@@ -115,7 +115,7 @@ export function ContactSection() {
                   </div>
                   <div className="space-y-1">
                     {info.details.map((detail) => (
-                      <p key={detail} className="text-xs text-zinc-500 leading-relaxed">{detail}</p>
+                      <p key={detail} className="text-sm text-zinc-500 leading-relaxed">{detail}</p>
                     ))}
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export function ContactSection() {
                 </li>
               ))}
             </ul>
-            <p className="text-xs text-zinc-500 leading-relaxed border-t border-zinc-100 pt-6">
+            <p className="text-sm text-zinc-500 leading-relaxed border-t border-zinc-100 pt-6">
               자료가 모두 없어도 괜찮습니다. 현장 사진이나 기존 제어반 명판 사진만 있어도
               전화로 먼저 상담해 드립니다.
             </p>

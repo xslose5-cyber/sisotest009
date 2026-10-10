@@ -16,7 +16,7 @@ export function ProductGallerySection() {
             Cases
           </p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight">
               제작·시공 사례
             </h2>
             <p className="text-zinc-500 text-sm max-w-sm leading-relaxed">
@@ -38,8 +38,8 @@ export function ProductGallerySection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-zinc-900/10 to-transparent" />
                   <figcaption className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-white font-semibold text-sm leading-tight">{info.label}</p>
-                    {info.sub && <p className="text-zinc-300 text-xs mt-0.5">{info.sub}</p>}
+                    <p className="text-white font-semibold text-base leading-tight">{info.label}</p>
+                    {info.sub && <p className="text-zinc-300 text-sm mt-0.5">{info.sub}</p>}
                   </figcaption>
                 </div>
               </figure>
@@ -47,7 +47,7 @@ export function ProductGallerySection() {
           })}
         </div>
 
-        <p className="text-center text-xs text-zinc-400 mt-8">
+        <p className="text-center text-sm text-zinc-400 mt-8">
           더 많은 납품 사례와 시공 사진은 문의해 주시면 보내 드립니다.
         </p>
       </div>

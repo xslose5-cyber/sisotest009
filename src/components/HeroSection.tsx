@@ -20,12 +20,13 @@ export function HeroSection() {
         <div className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-zinc-800/80 border border-zinc-700/50 mb-8 backdrop-blur-sm">
           <Factory className="w-4 h-4 text-zinc-300" />
           <span className="text-zinc-200 text-sm md:text-base font-semibold tracking-wide">
-            공장등록 제조사 · 설계부터 제작·시운전·A/S까지 직접
+            공장등록 제조사<span className="hidden sm:inline"> · </span><br className="sm:hidden" />
+            <span className="whitespace-nowrap">설계부터 제작·시운전·A/S까지 직접</span>
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-white leading-tight tracking-tight">
-          공조기·냉각탑·펌프·FAN<br />
+        <h1 className="text-[2rem] md:text-5xl lg:text-6xl font-bold mb-10 text-white leading-tight tracking-tight">
+          공조기·냉각탑·<br className="sm:hidden" />펌프·FAN<br />
           인버터 제어반,<br />
           <span className="text-white/50">제조사에서 직접<br className="md:hidden" /> 만듭니다</span>
         </h1>

@@ -16,7 +16,7 @@ export function TrustBar() {
             <fact.icon className="w-5 h-5 text-zinc-500 mt-0.5 shrink-0" />
             <div>
               <p className="text-white font-semibold text-sm md:text-base">{fact.title}</p>
-              <p className="text-zinc-400 text-xs mt-1">{fact.desc}</p>
+              <p className="text-zinc-400 text-sm mt-1">{fact.desc}</p>
             </div>
           </div>
         ))}

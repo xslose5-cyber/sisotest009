@@ -16,7 +16,7 @@ const navItems = [
   { label: "고장·수리", href: "#repair" },
 ];
 import { useState } from 'react';
-import logoImg from 'figma:asset/1b568686aa5e990a9ed27fc7c738cbf656a211f7.png';
+import logoImg from './assets/logo.png';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ export default function App() {
       <header className="sticky top-0 z-50 w-full border-b border-zinc-100 bg-white/95 backdrop-blur">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-7xl">
           <div className="flex items-center gap-2.5">
-            <img src={logoImg} alt="SISO 로고" className="h-12 w-auto object-contain" />
+            <img src={logoImg} alt="SISO 로고" className="h-11 w-auto object-contain" />
             <span className="hidden sm:inline-block text-xs text-zinc-400 border border-zinc-200 px-2 py-0.5 ml-1">
               인버터 제어반 전문
             </span>
@@ -106,7 +106,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div className="lg:col-span-2 space-y-4">
               <div className="flex items-center gap-2">
-                <img src={logoImg} alt="SISO 로고" className="h-14 w-auto object-contain brightness-0 invert" />
+                <img src={logoImg} alt="SISO 로고" className="h-12 w-auto object-contain brightness-0 invert" />
               </div>
               <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
                 공장등록 인버터 제어반 제조사.<br />
