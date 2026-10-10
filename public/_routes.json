@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": ["/assets/*", "/og-image.jpg", "/robots.txt", "/sitemap.xml", "/llms.txt"]
+}
